@@ -6,7 +6,7 @@ defmodule ElixirTutorial.MixProject do
       app: :elixir_tutorial,
       version: "0.1.0",
       elixir: "~> 1.9",
-      start_permanent: Mix.env() == :prod,
+      start_permanent: Mix.env() == :dev,
       deps: deps()
     ]
   end
@@ -24,7 +24,9 @@ defmodule ElixirTutorial.MixProject do
     [
       {:plug, "~> 1.8"},
       {:cowboy, "~> 2.6"},
-      {:plug_cowboy, "~> 2.1"}
+      {:plug_cowboy, "~> 2.1"},
+      {:jason, "~> 1.1"},
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
     ]
   end
 end
