@@ -1,5 +1,9 @@
 # ElixirTutorial
 
+## Overview
+
+Elixir + Cowboyで簡単なWebアプリケーションを作成するためのプロジェクトです。
+
 **TODO: Add description**
 
 ## Installation
