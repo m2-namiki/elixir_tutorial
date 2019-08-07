@@ -4,27 +4,35 @@
 
 Elixir + Cowboyで簡単なWebアプリケーションを作成するためのプロジェクトです。
 
-[ロマサガRS における Elixir サーバー開発実践](https://speakerdeck.com/elixirfest/romasakars-niokeru-elixir-sahakai-fa-shi-jian-sheng-chan-xing-woshang-ketekemufalsemian-bai-sanizhu-li)を参考にしています。
+[ロマサガRS における Elixir サーバー開発実践](https://speakerdeck.com/elixirfest/romasakars-niokeru-elixir-sahakai-fa-shi-jian-sheng-chan-xing-woshang-ketekemufalsemian-bai-sanizhu-li?slide=6)のアプリケーション・インフラ構成を **かなり** 参考にしています。
 
-## Futures
+## Functions
 
 * クライアントからのJSONリクエストを受け取ります
-* 受け取ったJSONリクエストをDBに登録します
-* 登録に成功した場合、その旨のJSONレスポンスを返却します
-  * ステータス及び登録順
-* 登録に失敗した場合、その旨のJSONレスポンスを返却します
-  * ステータス及びエラーメッセージ
+  * できればJSON-RPCとしたい
+* 指定されたJSONリクエストの内容をDBに登録する
+  * 登録に成功した場合、その旨のJSONレスポンスを返却します
+    * ステータス及び登録順
+  * 登録に失敗した場合、その旨のJSONレスポンスを返却します
+    * ステータス及びエラーメッセージ
+* 登録されているリクエストの件数を返却する
+  * ステータス及び登録件数
 
 ## Libraries
 
-* plug_cowboy
-* dialyxir
-* jason
+* [plug_cowboy](https://github.com/elixir-plug/plug_cowboy)
+  * Cowboy向けのPlugアダプタ
+* [dialyxir](https://github.com/jeremyjh/dialyxir)
+  * 静的解析ツール
+* [jason](https://github.com/michalmuskala/jason)
   * JSONパーサ
-* yacto
+* [yacto](https://github.com/gumi/yacto)
   * [Ecto](https://elixirschool.com/ja/lessons/ecto/basics/)のサポートライブラリ
-* simple_schema
+* [simple_schema](https://libraries.io/hex/simple_schema)
   * JSONの検証と各データ構造への設定を行うライブラリ
+
+
+#### Original README
 
 **TODO: Add description**
 
