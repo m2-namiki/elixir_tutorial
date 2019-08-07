@@ -26,7 +26,9 @@ defmodule ElixirTutorial.MixProject do
       {:cowboy, "~> 2.6"},
       {:plug_cowboy, "~> 2.1"},
       {:jason, "~> 1.1"},
-      {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
+      {:yacto, "~> 1.2"},
+      {:simple_schema, "~> 1.1"}
     ]
   end
 end
