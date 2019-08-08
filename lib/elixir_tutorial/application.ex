@@ -10,10 +10,10 @@ defmodule ElixirTutorial.Application do
     children = [
       {Plug.Cowboy, scheme: :http, plug: ElixirTutorial.Router, options: [port: cowboy_port()]}
     ]
+
     opts = [strategy: :one_for_one, name: ElixirTutorial.Supervisor]
 
     Logger.info("Starting application...")
     Supervisor.start_link(children, opts)
   end
-
 end
