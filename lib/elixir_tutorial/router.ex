@@ -19,9 +19,11 @@ defmodule ElixirTutorial.Router do
   post "/api" do
     name = conn.body_params["name"]
 
+    result = %{"status" => :ok, "message" => "Hello, #{name}."}
+
     conn
     |> put_resp_content_type("application/json")
-    |> send_resp(200, Jason.encode!(%{"status" => :ok, "message" => "Hello, #{name}."}))
+    |> send_resp(200, Jason.encode!(result))
   end
 
   match _ do
